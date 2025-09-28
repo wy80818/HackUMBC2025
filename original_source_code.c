@@ -19,14 +19,15 @@ char *gets(char *str);
 
 
 int main(int argc, char *argv[]) {
-    char last[25];
-    int pid = 0;
-    char ui_f1[30];
-    char ui_p[10];
+    char *last;
     char ui_id[10];
-    int no_please = 0;
+    char ui_f1[30];
     int b1 = 0;
+    int pid = 0;
 
+    int no_please = 0;
+    char ui_p[10];
+    
     printf("CLARIFICATIONS: There are 3 parts to this program, passing all 3 will give you the flag\n You are expected to complete this CTF challenge on Linux\n");
     printf("Welcome! This program doesn't actually contain malware, but what if it did? 0_0\n");
     printf("If this were real malware, you computer would be DONE-ZO!! >:)\n");
@@ -68,7 +69,7 @@ int main(int argc, char *argv[]) {
     while (!b1) {
         printf("Please enter the password: ");
         gets(ui_p); 
-
+        printf("%d", no_please);
         if (no_please == 0) {
             printf("Password is incorrect!\n");
         } else {
@@ -94,6 +95,7 @@ int main(int argc, char *argv[]) {
         }
     }
     
+    last = (char *)malloc(30*sizeof(char));
     // HackUMBC{M4lw4r3_M4573r}
     last[0] = 'H';
     last[1] = 'a';
@@ -123,5 +125,6 @@ int main(int argc, char *argv[]) {
 
     printf("You have passed all the tests! \nHere's the flag and go outside: %s", last);
 
+    free(last);
     return 0;
 }
