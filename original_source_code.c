@@ -8,6 +8,7 @@
 
 char KEY1[50] = "Key{c0ngr475_0n_k3y_0n3!}";
 
+
 void clear_stdin_buffer() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
@@ -26,7 +27,7 @@ int main(int argc, char *argv[]) {
     int no_please = 0;
     int b1 = 0;
 
-    printf("CLARIFICATIONS: There are 3 parts to this program, passing all 3 will give you the flag\n\n");
+    printf("CLARIFICATIONS: There are 3 parts to this program, passing all 3 will give you the flag\n You are expected to complete this CTF challenge on Linux\n");
     printf("Welcome! This program doesn't actually contain malware, but what if it did? 0_0\n");
     printf("If this were real malware, you computer would be DONE-ZO!! >:)\n");
     printf("Maybe in the future you could run a command to inspect some of the strings in a file?\n");
@@ -79,7 +80,7 @@ int main(int argc, char *argv[]) {
 
     printf("\nSo I guess THIS is why we don't use gets() anymore.\n");
     printf("Now let's move on to part 3...\n");
-    printf("Now get me the PID of the process responsible for running this program...\n");
+    printf("Now get me the Linux PID of the process responsible for running this program...\n");
 
     pid = (int) getpid();
     while (!b1) {

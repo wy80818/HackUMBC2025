@@ -1,6 +1,6 @@
-TARGET = notAVirus
+TARGET = notMalware
 
-SRCS = main.c
+SRCS = original_source_code.c
 
 OBJS = $(SRCS:.c=.o)
 
